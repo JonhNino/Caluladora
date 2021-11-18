@@ -1,0 +1,41 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left, #00F631,#00F);
+}
+
+.caculadora-grilla{
+    display: grid;
+    justify-content: center; 
+    align-content: center; 
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px); 
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+
+.caculadora-grilla > button{
+    cursor: pointer; 
+    font-size: 2rem;
+    border: 1 px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+.caculadora-grilla > button:hover{
+    background-color: rgba(230,0,0,0.9);
+}
+.ouput{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.ouput .display {
+    color: black;
+    font-size: 1.85rem;
+    text-align: right;
+}
